@@ -1,0 +1,21 @@
+.wp-block-embed-vimeo:not([data-background]) .wp-block-embed__wrapper {
+    position: relative;
+    &::after {
+        content: '';
+        background-color: rgba(black, 0.6);
+        background-image: url('../assets/img/play-icon.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 18% auto;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        transition: 0.4s;
+    }    
+}
+
+.wp-block-embed-vimeo[data-playing] .wp-block-embed__wrapper:after {
+    opacity: 0;
+}
